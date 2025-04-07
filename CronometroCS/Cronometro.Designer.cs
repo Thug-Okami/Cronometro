@@ -31,20 +31,13 @@ namespace CronometroCS
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblTempo = new System.Windows.Forms.Label();
             this.btnReiniciar = new System.Windows.Forms.Button();
             this.btnComecarPausar = new System.Windows.Forms.Button();
+            this.lblTempoSegundos = new System.Windows.Forms.Label();
+            this.lblTempoMinutos = new System.Windows.Forms.Label();
+            this.lblTempoMilesimos = new System.Windows.Forms.Label();
+            this.lblTempoHoras = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // lblTempo
-            // 
-            this.lblTempo.AutoSize = true;
-            this.lblTempo.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTempo.Location = new System.Drawing.Point(75, 27);
-            this.lblTempo.Name = "lblTempo";
-            this.lblTempo.Size = new System.Drawing.Size(204, 37);
-            this.lblTempo.TabIndex = 0;
-            this.lblTempo.Text = "00:00:00.000";
             // 
             // btnReiniciar
             // 
@@ -68,14 +61,58 @@ namespace CronometroCS
             this.btnComecarPausar.UseVisualStyleBackColor = true;
             this.btnComecarPausar.Click += new System.EventHandler(this.btnComecarPausar_Click_1);
             // 
+            // lblTempoSegundos
+            // 
+            this.lblTempoSegundos.AutoSize = true;
+            this.lblTempoSegundos.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTempoSegundos.Location = new System.Drawing.Point(207, 32);
+            this.lblTempoSegundos.Name = "lblTempoSegundos";
+            this.lblTempoSegundos.Size = new System.Drawing.Size(84, 46);
+            this.lblTempoSegundos.TabIndex = 3;
+            this.lblTempoSegundos.Text = "00s";
+            // 
+            // lblTempoMinutos
+            // 
+            this.lblTempoMinutos.AutoSize = true;
+            this.lblTempoMinutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTempoMinutos.Location = new System.Drawing.Point(104, 32);
+            this.lblTempoMinutos.Name = "lblTempoMinutos";
+            this.lblTempoMinutos.Size = new System.Drawing.Size(97, 46);
+            this.lblTempoMinutos.TabIndex = 4;
+            this.lblTempoMinutos.Text = "00m";
+            // 
+            // lblTempoMilesimos
+            // 
+            this.lblTempoMilesimos.AutoSize = true;
+            this.lblTempoMilesimos.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTempoMilesimos.Location = new System.Drawing.Point(297, 32);
+            this.lblTempoMilesimos.Name = "lblTempoMilesimos";
+            this.lblTempoMilesimos.Size = new System.Drawing.Size(139, 46);
+            this.lblTempoMilesimos.TabIndex = 5;
+            this.lblTempoMilesimos.Text = "000ms";
+            // 
+            // lblTempoHoras
+            // 
+            this.lblTempoHoras.AutoSize = true;
+            this.lblTempoHoras.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTempoHoras.Location = new System.Drawing.Point(12, 32);
+            this.lblTempoHoras.Name = "lblTempoHoras";
+            this.lblTempoHoras.Size = new System.Drawing.Size(86, 46);
+            this.lblTempoHoras.TabIndex = 6;
+            this.lblTempoHoras.Text = "00h";
+            // 
             // FrmCronometro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(434, 461);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(447, 461);
+            this.Controls.Add(this.lblTempoHoras);
+            this.Controls.Add(this.lblTempoMilesimos);
+            this.Controls.Add(this.lblTempoMinutos);
+            this.Controls.Add(this.lblTempoSegundos);
             this.Controls.Add(this.btnComecarPausar);
             this.Controls.Add(this.btnReiniciar);
-            this.Controls.Add(this.lblTempo);
             this.MaximizeBox = false;
             this.Name = "FrmCronometro";
             this.Text = "Cronômetro";
@@ -90,10 +127,12 @@ namespace CronometroCS
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblTempo;
         private System.Windows.Forms.Button btnReiniciar;
         private System.Windows.Forms.Button btnComecarPausar;
+        private System.Windows.Forms.Label lblTempoSegundos;
+        private System.Windows.Forms.Label lblTempoMinutos;
+        private System.Windows.Forms.Label lblTempoMilesimos;
+        private System.Windows.Forms.Label lblTempoHoras;
     }
 }
 

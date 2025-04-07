@@ -50,9 +50,17 @@ namespace CronometroCS
             // Formatação e visualização do valor de TimeSpan.
             string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:000}",
                 ts.Hours, ts.Minutes, ts.Seconds,
-                ts.Milliseconds / 1); 
+                ts.Milliseconds / 1);
 
-            lblTempo.Text = elapsedTime;
+            string elapsedTimeHoras = string.Format("{0:00h}", ts.Hours);
+            string elapsedTimeMinutos = string.Format("{0:00m}", ts.Minutes);
+            string elapsedTimeSegundos = string.Format("{0:00s}", ts.Seconds);
+            string elapsedTimeMilesimos = string.Format("{0:00ms}", ts.Milliseconds);
+
+            lblTempoHoras.Text = elapsedTimeHoras;
+            lblTempoMinutos.Text = elapsedTimeMinutos;
+            lblTempoSegundos.Text = elapsedTimeSegundos;
+            lblTempoMilesimos.Text = elapsedTimeMilesimos;
         }
 
         //Reseta o valor do cronômetro e zera a contagem
@@ -62,7 +70,10 @@ namespace CronometroCS
             timer.Stop();
             stopWatch.Reset();
 
-            lblTempo.Text = "00:00:00.000";
+            lblTempoHoras.Text = "00h";
+            lblTempoMinutos.Text = "00m";
+            lblTempoSegundos.Text = "00s";
+            lblTempoMilesimos.Text = "000ms";
         }
     }
 }
